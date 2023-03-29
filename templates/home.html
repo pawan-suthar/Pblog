@@ -1,0 +1,29 @@
+{% extends 'base.html'%}
+
+{% block title %} welcome to pblog {% endblock %}
+
+
+{% block content %}
+<div class="container mt-3">
+    <h3 style="text-align: center;font-size: 50px;">recently uploaded blogs</h3>
+    <br>
+    <div class="row">
+        <div class="col s12">
+            {% for p in posts %}
+            <div class="row">
+                <div class="col s12 m4">
+                    <img src="/media/{{p.img}}" class="responsive-img mt-3" style="border-radius: 10px;">
+                </div>
+                <div class="col s12 m8">
+                    <h5 style="font-size: 30px;">{{p.title}}</h5>
+                    {{p.content | truncatewords:35 | safe }}
+                    <div class="mt-3">
+                        <a href="/blog/{{p.url}}" class="btn">read more</a>
+                    </div>
+                    <br>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+    {% endblock %}

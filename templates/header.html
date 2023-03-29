@@ -1,0 +1,54 @@
+{% load static %}
+
+
+<nav>
+  <a href="/"><img class="abc" src="{% static 'img/abc.png' %}"></a>
+  
+
+  <style>
+    .abc{
+      max-width: 120px;
+      align-items: center;
+      justify-content: center;
+      margin-top: 8px;
+      margin-left: 30px;
+    }
+
+
+
+  </style>
+
+
+
+  <!-- <div class="logo"><a style="color: #86c232;" href="/">pblog</a></div> -->
+
+  <label for="btn" class="icon">
+    <span class="fa fa-bars"></span>
+  </label>
+
+ 
+ 
+
+  <input type="checkbox" id="btn" />
+
+
+  <ul>
+    <li><a href="/admin">admin</a></li>
+    <li><a href="/about">about</a></li>
+
+    <li>
+      <label for="btn-1" class="show">category+</label>
+      <a href="#">Category</a>
+      <input type="checkbox" id="btn-1" />
+      <ul>
+        {% for c in categorys %}
+        <li><a href="category/{{c.url}}">{{c.title}}</a></li>
+        {% endfor %}
+
+      </ul>
+      </li> 
+  </ul>
+</nav>
+
+
+

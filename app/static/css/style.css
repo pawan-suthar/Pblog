@@ -1,0 +1,21 @@
+.bg-primary{
+    background-color: #ffffff !important;
+}
+
+.txt-primary{
+    background-color: #86c232 !important;
+}
+
+
+.mt-3{
+    margin-top: 20px;
+}
+
+
+.container-custom{
+    width: 90% !important;
+    margin: auto !important;
+    
+}
+
+
