@@ -1,37 +1,21 @@
 {% extends 'base.html'%}
-
-
-
 {% block title %} welcome to pblog {% endblock %}
-
-
 {% block content %}
+<div class="container-custom">
+    <div class="row">
+        <div class="col s12 m12 l12">
 
-    <div class="container-custom">
-        <div class="row">
-            <div class="col s12 m12 l12">
-
-                <h4>{{post.title}}</h4>
-                <p>Catagory: {{post.cat.title}}</p>
-                <img src="/media/{{post.img}}" style="width: 40%; height: 40%; border-radius: 20px; margin-left: 30%; " class="rounded mx-auto d-block mt-3">
-
-                <br>
-                <p class="mt-3">
-                    {{post.content | safe }}
-                </p>
-
-
-            </div>
+            <h4>{{post.title}}</h4>
+            <p>Catagory: {{post.cat.title}}</p>
+            <img src="/media/{{post.img}}" style="width: 40%; height: 40%;
+                border-radius: 20px; margin-left: 30%; " class="rounded mx-auto
+                d-block mt-3">
+            <br>
+            <p class="mt-3">
+                {{post.content | safe }}
+            </p>
         </div>
     </div>
-
-
-
-
-
-
-
-
-
+</div>
 
 {% endblock %}
